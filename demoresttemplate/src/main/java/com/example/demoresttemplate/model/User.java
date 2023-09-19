@@ -3,55 +3,44 @@ package com.example.demoresttemplate.model;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Data
+@Getter // Getter + No-args constructor
 @AllArgsConstructor
-@NoArgsConstructor
-@Builder
+@NoArgsConstructor // Jaskson
 public class User {
-
   private long id;
   private String name;
   private String username;
   private String email;
-  private Address address;
+  private Adderss address;
   private String phone;
-  private String webste;
+  private String website;
   private Company company;
 
+  @Getter
+  public static class Adderss {
+    private String street;
+    private String suite;
+    private String city;
+    private String zipcode;
+    private Geo geo;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-
-public class Address {
-
-  private String street;
-  private String suite;
-  private String zipcode;
-  private Geo geo;
-
-  @Data
-  @AllArgsConstructor
-  @NoArgsConstructor
-
-  public class Geo {
-    double lat;
-    double lng;
+    @Getter
+    public static class Geo {
+      private String lat;
+      private String lng;
+    }
   }
-}
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
+  @Getter
+  public static class Company {
+    private String name;
+    private String catchPhrase;
+    private String bs;
+  }
 
-public class Company {
-private String name;
-private String catchPhrase;
-private String bs;
-
-}
 
 }
 

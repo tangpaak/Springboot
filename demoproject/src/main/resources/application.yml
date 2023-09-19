@@ -1,0 +1,18 @@
+server:
+  port: 8086
+
+api:
+  finnhub: 
+    domain: 'finnhub.io/api/v1'
+    endpoints:
+      profile: "profile2?isin=US5949181045&token=ck4fv49r01qus81pv8jgck4fv49r01qus81pv8k0"
+      quote: "quote?symbol=AAPL&token=ck4fv49r01qus81pv8jgck4fv49r01qus81pv8k0"
+
+
+
+
+
+
+
+
+

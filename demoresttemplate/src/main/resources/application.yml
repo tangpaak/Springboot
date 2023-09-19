@@ -4,6 +4,6 @@ server:
 api:
   jsonplaceholder:
    domain: 'jsonplaceholder.typicode.com'
-   endpoint:
+   endpoints:
      user: "/users"
   
